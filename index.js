@@ -86,4 +86,84 @@
 //
 // console.log('driversStatuses: ', driversStatuses) // driversStatuses:  [ 'Ожидает', 'Готов к отправлению', 'Ожидает' ]
 
+// Object дополнительно посмотреть методы: apply, assign, bind
 
+// Object.keys() = принимает в себя объект и возвращает массив ключей
+
+// const user = {
+//     isStudent: 'true',
+//     name: 'Vadim'
+// }
+//
+// const result = Object.keys(user)
+//
+// console.log('result: ', result)
+//
+// const user2 = {
+//     isStudent: 'false',
+//     name: 'Test',
+//     country: {
+//         city: 'London'
+//     }
+// }
+//
+// const result2 = Object.keys(user2) // Собирает ключи только у первого уровня вложенности
+// console.log('result2: ', result2) //result2:  [ 'isStudent', 'name', 'country' ]
+
+// Object.values() - принимает в себя объект и возвращает массив значений этого объекта
+
+// const user = {
+//     isStudent: 'true',
+//     name: 'Vadim'
+// }
+//
+// const testObj = {
+//     name: 'Test',
+//     country: {
+//         city: 'London'
+//     }
+// }
+//
+// const valuesResult = Object.values(user)
+// const testObjValues = Object.values(testObj)
+//
+// console.log('valuesResult: ', valuesResult)  // [ 'true', 'Vadim' ]
+// console.log('testObjValues: ', testObjValues) // [ 'Test', { city: 'London' } ]
+
+// Object.entries() - принимает объект и возвращает массив пар ключ и значение
+
+// const user = {
+//     isStudent: 'true',
+//     name: 'Vadim'
+// }
+//
+// const testObj = {
+//     name: 'Test',
+//     country: {
+//         city: 'London'
+//     }
+// }
+//
+// const entriesResult2 = Object.entries(testObj)
+// const entriesResult = Object.entries(user)
+//
+// console.log('entriesResult: ', entriesResult) // entriesResult:  [ [ 'isStudent', 'true' ], [ 'name', 'Vadim' ] ]
+// console.log('entriesResult2: ', entriesResult2) // entriesResult2:  [ [ 'name', 'Test' ], [ 'country', { city: 'London' } ] ]
+
+// const formValues = {
+//     name: "Test",
+//     age: '',
+//     address: "New York"
+// }
+//
+// const validateForm = (data) => {
+//     let emptyFields = Object.keys(data).filter(key => data[key].length > 0)
+//     if (emptyFields.length > 0) {
+//         console.log("Enter something")
+//     } else {
+//         console.log("Console log number 2")
+//     }
+// }
+//
+// const res = validateForm(formValues) //Enter something
+// console.log('res: ', res)
