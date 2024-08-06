@@ -157,7 +157,9 @@
 // }
 //
 // const validateForm = (data) => {
-//     let emptyFields = Object.keys(data).filter(key => data[key].length > 0)
+//     // let emptyFields = Object.keys(data).filter(key => data[key] === '')
+//     let emptyFields = Object.keys(data).filter(key => data[key].length === 0)
+//     console.log('emptyFields: ', emptyFields)
 //     if (emptyFields.length > 0) {
 //         console.log("Enter something")
 //     } else {
@@ -165,5 +167,98 @@
 //     }
 // }
 //
-// const res = validateForm(formValues) //Enter something
-// console.log('res: ', res)
+// validateForm(formValues) //Enter something
+
+// new Map/ new Set
+// new Map - это коллекция ключ/значение как объект
+// ключи могут быть не только строки
+
+// FIRST COLLECTION /////////////////////////////////////////////////////////////////
+
+// const map = new Map()
+// console.log('map collection: ', map) // map collection:  Map(0) {}
+
+// set (key, value)
+// map.set(true, 'boolean value')
+// map.set({}, 'object value')
+// map.set(4, 'four number')
+// map.set('4', '4 string')
+
+// console.log('map collection after adding items: ', map)
+
+// console.log(map.get(4))
+// console.log(map.get({})) // undefined - ссылка на разные объекты
+
+// console.log(map.has(true)) // true
+// console.log(map.has(666)) // false
+
+// map.delete('4')
+// map.delete(true)
+// console.log('map after deleting: ', map) // map after deleting:  Map(2) { {} => 'object value', 4 => 'four number' }
+
+// map.clear()
+// console.log('map after clear: ', map) // Map(0) {}
+
+// SECOND COLLECTION ///////////////////////////////////////////////////////
+
+// const initialData = [
+//     ['key1', 'value2'], // Строго 2 элемента в подмассиве
+//     [true, 'boolean value'],
+//     [{}, 'object value']
+// ]
+
+
+
+// const map2 = new Map(initialData)
+
+// console.log('map2: ', map2)
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+// new Set() - это особый вид коллекции (без ключей) или как еще называют - множество коллекций
+// Уникальные значения, встречаются только один раз
+
+// const set1 = new Set()
+// console.log('set: ', set1) // set: Set(0) {}
+
+// set1.add("1");
+// set1.add(true);
+// set1.add({});
+// set1.add("1");
+// set1.add(2);
+// set1.add({});
+
+// console.log('set: ', set1)
+//
+// set1.delete(true)
+// set1.delete('1')
+//
+// console.log('set: ', set1)
+
+// console.log(set1.values()) // [Set Iterator] { '1', true, {}, 2, {} }
+
+// let arr = ['test', 1, 2, 4, 1, 1, 1, 'test', 4, 5]
+
+// const set2 = new Set(arr)
+
+// console.log('set2: ', set2) // set2:  Set(5) { 'test', 1, 2, 4, 5 }
+
+// let numbers = [1, 1, 2, 2, 3, 4, 5, 6, 6 , 8, 8, 10, 'a', 'a', 'b']
+//
+// let uniqueNumbers = new Set(numbers)
+//
+// console.log('uniqueNumbers: ', uniqueNumbers)
+//
+// let uniqueArr = [...uniqueNumbers]
+//
+// console.log('uniqueArr: ', uniqueArr) //uniqueArr:  [1, 2, 3,  4, 5, 6, 8, 10, 'a', 'b']
+//
+// let uniqueArr2 = [...new Set(uniqueArr)]
+// console.log(uniqueArr2) //[1, 2, 3,  4, 5, 6, 8, 10, 'a', 'b']
+
+
+
